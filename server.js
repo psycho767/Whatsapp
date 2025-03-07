@@ -14,9 +14,9 @@ if (!baseWebhookURL) {
 }
 
 // Serve Swagger UI
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
-  console.log(`Swagger UI available at http://localhost:${port}/api-docs`);
+  console.log(`Swagger UI available at http://localhost:${port}/`);
 });
